@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sergio Cano Molina</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 <!--HEADER-->
@@ -256,66 +257,6 @@
                 </div>
             </div>
         </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const carruseles = document.querySelectorAll('[data-carrusel]');
-            
-            carruseles.forEach((container, index) => {
-                const carousel = container.querySelector('.carousel');
-                const slides = container.querySelectorAll('.carousel-slide');
-                const prevButton = container.querySelector('.carousel-prev');
-                const nextButton = container.querySelector('.carousel-next');
-                
-                let currentSlide = 0;
-                const totalSlides = slides.length;
-                let autoPlayInterval;
-                
-                function updateCarousel() {
-                    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-                }
-                
-                function nextSlide() {
-                    currentSlide = (currentSlide + 1) % totalSlides;
-                    updateCarousel();
-                }
-                
-                function prevSlide() {
-                    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-                    updateCarousel();
-                }
-                
-                function startAutoPlay() {
-                    stopAutoPlay();
-                    autoPlayInterval = setInterval(nextSlide, 5000);
-                }
-                
-                function stopAutoPlay() {
-                    clearInterval(autoPlayInterval);
-                }
-                
-                // Event listeners
-                nextButton.addEventListener('click', function() {
-                    stopAutoPlay();
-                    nextSlide();
-                    startAutoPlay();
-                });
-                
-                prevButton.addEventListener('click', function() {
-                    stopAutoPlay();
-                    prevSlide();
-                    startAutoPlay();
-                });
-                
-                // Pausar/reanudar al hacer hover
-                container.addEventListener('mouseenter', stopAutoPlay);
-                container.addEventListener('mouseleave', startAutoPlay);
-                
-                // Iniciar
-                updateCarousel();
-                startAutoPlay();
-            });
-        });
-    </script>
 
         <div class="container">
             <h2 class="section-title">Isla</h2>
@@ -396,66 +337,6 @@
                 </div>
             </div>
         </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const carruseles = document.querySelectorAll('[data-carrusel]');
-            
-            carruseles.forEach((container, index) => {
-                const carousel = container.querySelector('.carousel');
-                const slides = container.querySelectorAll('.carousel-slide');
-                const prevButton = container.querySelector('.carousel-prev');
-                const nextButton = container.querySelector('.carousel-next');
-                
-                let currentSlide = 0;
-                const totalSlides = slides.length;
-                let autoPlayInterval;
-                
-                function updateCarousel() {
-                    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-                }
-                
-                function nextSlide() {
-                    currentSlide = (currentSlide + 1) % totalSlides;
-                    updateCarousel();
-                }
-                
-                function prevSlide() {
-                    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-                    updateCarousel();
-                }
-                
-                function startAutoPlay() {
-                    stopAutoPlay();
-                    autoPlayInterval = setInterval(nextSlide, 5000);
-                }
-                
-                function stopAutoPlay() {
-                    clearInterval(autoPlayInterval);
-                }
-                
-                // Event listeners
-                nextButton.addEventListener('click', function() {
-                    stopAutoPlay();
-                    nextSlide();
-                    startAutoPlay();
-                });
-                
-                prevButton.addEventListener('click', function() {
-                    stopAutoPlay();
-                    prevSlide();
-                    startAutoPlay();
-                });
-                
-                // Pausar/reanudar al hacer hover
-                container.addEventListener('mouseenter', stopAutoPlay);
-                container.addEventListener('mouseleave', startAutoPlay);
-                
-                // Iniciar
-                updateCarousel();
-                startAutoPlay();
-            });
-        });
-    </script>
 
         <div class="container">
             <h2 class="section-title">Mapa de Fortnite hecho con UEFN para FlyCroc</h2>
@@ -515,66 +396,6 @@
                 </div>
             </div>
         </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const carruseles = document.querySelectorAll('[data-carrusel]');
-            
-            carruseles.forEach((container, index) => {
-                const carousel = container.querySelector('.carousel');
-                const slides = container.querySelectorAll('.carousel-slide');
-                const prevButton = container.querySelector('.carousel-prev');
-                const nextButton = container.querySelector('.carousel-next');
-                
-                let currentSlide = 0;
-                const totalSlides = slides.length;
-                let autoPlayInterval;
-                
-                function updateCarousel() {
-                    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-                }
-                
-                function nextSlide() {
-                    currentSlide = (currentSlide + 1) % totalSlides;
-                    updateCarousel();
-                }
-                
-                function prevSlide() {
-                    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-                    updateCarousel();
-                }
-                
-                function startAutoPlay() {
-                    stopAutoPlay();
-                    autoPlayInterval = setInterval(nextSlide, 5000);
-                }
-                
-                function stopAutoPlay() {
-                    clearInterval(autoPlayInterval);
-                }
-                
-                // Event listeners
-                nextButton.addEventListener('click', function() {
-                    stopAutoPlay();
-                    nextSlide();
-                    startAutoPlay();
-                });
-                
-                prevButton.addEventListener('click', function() {
-                    stopAutoPlay();
-                    prevSlide();
-                    startAutoPlay();
-                });
-                
-                // Pausar/reanudar al hacer hover
-                container.addEventListener('mouseenter', stopAutoPlay);
-                container.addEventListener('mouseleave', startAutoPlay);
-                
-                // Iniciar
-                updateCarousel();
-                startAutoPlay();
-            });
-        });
-    </script>
 
     <div class="proyecto-item" style="margin-top: 60px; margin-bottom: 120px;">
             <h2 class="section-title">Mecánica de FPS básico</h2>
