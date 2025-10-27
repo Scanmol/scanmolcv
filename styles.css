@@ -690,3 +690,267 @@ footer {
     opacity: 0.7;
     margin-top: 5px;
 }
+
+/* ===== MEDIA QUERIES PARA DISPOSITIVOS MÓVILES ===== */
+
+/* Para pantallas de hasta 768px (tablets y móviles) */
+@media (max-width: 768px) {
+    /* Ajustes generales */
+    .container {
+        padding: 0 15px;
+        margin-bottom: 60px;
+    }
+    
+    section {
+        padding: 50px 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    
+    /* Header */
+    header {
+        height: 100vh;
+        min-height: 600px;
+    }
+    
+    .profile-circle {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .header-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .tagline {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+    
+    .shape-1, .shape-2, .shape-3 {
+        display: none; /* Ocultar formas decorativas en móvil */
+    }
+    
+    /* Sobre Mí */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .about-visual {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .visual-element {
+        flex: 0 0 calc(50% - 20px);
+    }
+    
+    .circle-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    /* Formación, Experiencia e Idiomas */
+    .content {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .column {
+        padding: 15px;
+        min-width: 100%;
+    }
+    
+    .left-column, .middle-column {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .barra-section-title {
+        font-size: 1.5rem;
+    }
+    
+    /* Habilidades */
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .skill-category {
+        padding: 20px;
+    }
+    
+    .skill-tags {
+        justify-content: center;
+    }
+    
+    .skill-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    /* Proyectos */
+    .PT-section-title {
+        font-size: 3rem;
+        margin-bottom: 80px;
+    }
+    
+    .PROG-section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    
+    .carousel-container {
+        max-width: 100%;
+    }
+    
+    .project-image, .project-image2 {
+        height: 300px;
+        width: 100%;
+    }
+    
+    .carousel-controls {
+        padding: 0 10px;
+    }
+    
+    .carousel-prev, .carousel-next {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    /* Videos */
+    .video-container {
+        max-width: 100%;
+    }
+    
+    .video-container.horizontal {
+        max-width: 100%;
+    }
+    
+    .video-container.horizontal video {
+        height: 300px;
+    }
+    
+    /* Contacto */
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .contact-item {
+        padding: 15px;
+    }
+    
+    .contact-icon2 {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+/* Para pantallas de hasta 480px (móviles pequeños) */
+@media (max-width: 480px) {
+    /* Ajustes adicionales para móviles muy pequeños */
+    .header-content h1 {
+        font-size: 2rem;
+    }
+    
+    .tagline {
+        font-size: 1rem;
+    }
+    
+    .profile-circle {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .PT-section-title {
+        font-size: 2.5rem;
+    }
+    
+    .about-visual {
+        gap: 15px;
+    }
+    
+    .visual-element {
+        flex: 0 0 calc(50% - 15px);
+    }
+    
+    .circle-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-image, .project-image2 {
+        height: 250px;
+    }
+    
+    .video-container.horizontal video {
+        height: 250px;
+    }
+}
+
+/* Para pantallas muy pequeñas (hasta 360px) */
+@media (max-width: 360px) {
+    .header-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .profile-circle {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .visual-element {
+        flex: 0 0 100%;
+    }
+    
+    .project-image, .project-image2 {
+        height: 200px;
+    }
+    
+    .video-container.horizontal video {
+        height: 200px;
+    }
+}
+
+/* Ajustes de orientación para móviles */
+@media (max-height: 600px) and (orientation: landscape) {
+    header {
+        height: auto;
+        min-height: 100vh;
+        padding: 40px 0;
+    }
+    
+    .profile-circle {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .header-content h1 {
+        font-size: 2rem;
+    }
+    
+    .tagline {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    
+    .scroll-indicator {
+        display: none; /* Ocultar indicador de scroll en landscape */
+    }
+}
