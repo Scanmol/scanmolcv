@@ -13,13 +13,12 @@
 </head>
 <body>
 <nav class="main-nav" aria-label="Navegación principal">
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#formacion">Formación</a>
-        <a href="#habilidades">Habilidades</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#sobre-mi" style="text-decoration:none">Sobre mí</a>
+        <a href="#formacion" style="text-decoration:none">Formación</a>
+        <a href="#habilidades" style="text-decoration:none">Habilidades</a>
+        <a href="#proyectos" style="text-decoration:none">Proyectos</a>
+        <a href="#contacto" style="text-decoration:none">Contacto</a>
     </nav>
-    <!-- test -->
 <!--HEADER-->
     <header>
         <div class="header-content">
@@ -34,8 +33,10 @@
             <p class="tagline">Técnico en Sistemas Microinformáticos y Redes · Estudiante de DAM</p>
             <a class="btn-cv" href="Currículum_CV_Sergio_Cano_Molina.pdf" download>Descargar CV (PDF)</a>
             <div class="scroll-indicator">
-                <span>Desplázate</span>
-                <div class="arrow"></div>
+                <span><a href="#sobre-mi" style="text-decoration:none">Desplázate</a></span>
+                <a href="#sobre-mi">
+                    <div class="arrow"></div>
+                </a>
             </div>
         </div>
         <div class="header-background">
@@ -51,10 +52,14 @@
             <h2 class="section-title">Sobre Mí</h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <p><strong>Apasionado</strong> sobre el mundo de la tecnología, eso me ha llevado a <strong>estudiar</strong>, <strong>experimentar</strong> y seguir <strong>aprendiendo</strong> cada día más.</p>
-                    <p>Capaz de <strong>adaptarme</strong> a diferentes puestos de trabajo y nuevas situaciones laborales originados por cambios tecnológicos y organizativos en los procesos productivos.</p>
-                    <p>Estoy comprometido a aportar a cada proyecto <strong>espíritu</strong> de equipo, <strong>disciplina</strong> y una actitud de <strong>aprendizaje</strong> constante, buscando crecer profesionalmente mientras contribuyo al <strong>éxito colectivo</strong>.</p>
-                    <p>Actualmente estudio <strong>1º de Desarrollo de Aplicaciones Multiplataforma</strong> y busco seguir creciendo en el desarrollo de software y los sistemas.</p>
+                    <p><strong>Apasionado</strong> sobre el mundo de la tecnología, eso me ha llevado a <strong>estudiar</strong>, 
+                        <strong>experimentar</strong> y seguir <strong>aprendiendo</strong> cada día más.</p>
+                    <p>Capaz de <strong>adaptarme</strong> a diferentes puestos de trabajo y nuevas situaciones laborales originados por cambios tecnológicos y 
+                        organizativos en los procesos productivos.</p>
+                    <p>Estoy comprometido a aportar a cada proyecto <strong>espíritu</strong> de equipo, <strong>disciplina</strong> y una 
+                        actitud de <strong>aprendizaje</strong> constante, buscando crecer profesionalmente mientras contribuyo al <strong>éxito colectivo</strong>.</p>
+                    <p>Actualmente estudio <strong>1º de Desarrollo de Aplicaciones Multiplataforma</strong> y busco seguir 
+                        creciendo en el desarrollo de software y los sistemas.</p>
                 </div>
                 <div class="about-visual">
                     <div class="visual-element">
@@ -105,14 +110,19 @@
                                 <h2 class="barra-section-title">Experiencia</h2>
                                 
                             <div class="experience-item">
-                                <div class="item-title">IES Pedro Soto de Rojas</div>
-                                <div class="item-date">2025 - 2026 (4 meses)</div>
+                                <div class="item-title">· Prácticas en TIC</div>
                             </div>
 
                             <div class="experience-item">
-                                <div class="item-title">IES Zaidín Vergeles · Prácticas en TIC</div>
+                                <div class="item-title">IES Pedro Soto de Rojas</div>
+                                <div class="item-date">2025 - 2026 (4 meses)</div>
+                                <div class="item-subtitle">Instalación de sistemas operativos, reparación de equipos, cableado y electrónica de redes locales, y configuración y 
+                                    mantenimiento de servicios multiusuario, aplicaciones y dispositivos compartidos en red local.</div>
+                            </div>
+
+                            <div class="experience-item">
+                                <div class="item-title">IES Zaidín Vergeles</div>
                                 <div class="item-date">2025 (1 mes)</div>
-                                <div class="item-subtitle">Instalación de sistemas operativos, reparación de equipos, cableado y electrónica de redes locales, y configuración y mantenimiento de servicios multiusuario, aplicaciones y dispositivos compartidos en red local.</div>
                             </div>
                         </div>
                         </div>
@@ -142,27 +152,29 @@
             <h2 class="section-title">Habilidades</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Desarrollo (en formación)</h3>
+                    <h3>Desarrollo y programación (en formación)</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">CSS</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Git / GitHub</span>
+                        <img src="Fotos/Iconos/java.png" alt="Java" class="skill-icon">
+                        <img src="Fotos/Iconos/csharp.png" alt="C#" class="skill-icon">
+                        <img src="Fotos/Iconos/HTML5.webp" alt="HTML" class="skill-icon">
+                        <img src="Fotos/Iconos/css.png" alt="CSS" class="skill-icon">
+                        <img src="Fotos/Iconos/javascript.png" alt="JavaScript" class="skill-icon">
+                        <img src="Fotos/Iconos/git.webp" alt="Git / GitHub" class="skill-icon">
                     </div>
                 </div>
 
                 <div class="skill-category">
                     <h3>Programas 3D</h3>
                     <div class="skill-tags">
-                        <img src="Fotos/Iconos/Unreal.webp" alt="Unreal Engine" class="skill-icon">
-                        <img src="Fotos/Iconos/Blender.png" alt="Blender" class="skill-icon">
                         <img src="Fotos/Iconos/Unity.png" alt="Unity" class="skill-icon">
+                        <img src="Fotos/Iconos/Blender.png" alt="Blender" class="skill-icon">
+                        <img src="Fotos/Iconos/Unreal.webp" alt="Unreal Engine" class="skill-icon">
                         <img src="Fotos/Iconos/godot.png" alt="Godot" class="skill-icon">
                     </div>
                 </div>
                 
                 <div class="skill-category">
-                    <h3>DAWs</h3>
+                    <h3>DAWs y audio</h3>
                     <div class="skill-tags">
                         <img src="Fotos/Iconos/fl-studio2.png" alt="FL Studio" class="skill-icon">
                         <img src="Fotos/Iconos/ableton.png" alt="Ableton" class="skill-icon">
@@ -179,14 +191,6 @@
                         <img src="Fotos/Iconos/inshot.png" alt="InShot" class="skill-icon">
                     </div>
                 </div>
-                
-                <div class="skill-category">
-                    <h3>Programas CAD</h3>
-                    <div class="skill-tags">
-                        <img src="Fotos/Iconos/DojoCad.png" alt="DojoCad" class="skill-icon">
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -216,7 +220,7 @@
                             </div>
                             <div class="project-info">
                                 <h3>Assets</h3>
-                                <p>Todos los assets son reutilizados desde el marketplace de Unreal Engine.</p>
+                                <p>La prueba consistía en usar assets desde el marketplace de Unreal Engine.</p>
                             </div>
                         </div>
                     </div>
@@ -225,12 +229,20 @@
                             <div class="project-image2">
                                 <img src="Fotos/Carrusel/Castillo/Castillo (3).png" alt="Castillo en ruinas en Unreal Engine, imagen 3">
                             </div>
+                            <div class="project-info">
+                                <h3>Proyecto de Environment Art</h3>
+                                <p>Prueba de escenario en un castillo en ruinas.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="carousel-slide">
                         <div class="project-card">
                             <div class="project-image2">
                                 <img src="Fotos/Carrusel/Castillo/Castillo (4).png" alt="Castillo en ruinas en Unreal Engine, imagen 4">
+                            </div>
+                            <div class="project-info">
+                                <h3>Proyecto de Environment Art</h3>
+                                <p>Prueba de escenario en un castillo en ruinas.</p>
                             </div>
                         </div>
                     </div>
@@ -239,12 +251,20 @@
                             <div class="project-image2">
                                 <img src="Fotos/Carrusel/Castillo/Castillo (5).png" alt="Castillo en ruinas en Unreal Engine, imagen 5">
                             </div>
+                            <div class="project-info">
+                                <h3>Proyecto de Environment Art</h3>
+                                <p>Prueba de escenario en un castillo en ruinas.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="carousel-slide">
                         <div class="project-card">
                             <div class="project-image2">
                                 <img src="Fotos/Carrusel/Castillo/Castillo (6).png" alt="Castillo en ruinas en Unreal Engine, imagen 6">
+                            </div>
+                            <div class="project-info">
+                                <h3>Proyecto de Environment Art</h3>
+                                <p>Prueba de escenario en un castillo en ruinas.</p>
                             </div>
                         </div>
                     </div>
@@ -253,12 +273,20 @@
                             <div class="project-image2">
                                 <img src="Fotos/Carrusel/Castillo/Castillo (7).png" alt="Castillo en ruinas en Unreal Engine, imagen 7">
                             </div>
+                            <div class="project-info">
+                                <h3>Proyecto de Environment Art</h3>
+                                <p>Prueba de escenario en un castillo en ruinas.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="carousel-slide">
                         <div class="project-card">
                             <div class="project-image2">
                                 <img src="Fotos/Carrusel/Castillo/Castillo (8).png" alt="Castillo en ruinas en Unreal Engine, imagen 8">
+                            </div>
+                            <div class="project-info">
+                                <h3>Proyecto de Environment Art</h3>
+                                <p>Prueba de escenario en un castillo en ruinas.</p>
                             </div>
                         </div>
                     </div>
@@ -290,6 +318,10 @@
                             <div class="project-image">
                                 <img src="Fotos/Carrusel/Isla/Isla (2).png" alt="Isla en Unreal Engine 5.1, imagen 2">
                             </div>
+                            <div class="project-info">
+                                <h3>Proyecto de Environment Art</h3>
+                                <p>Prueba de una Isla hecha en UE5.1</p>
+                            </div>
                         </div>
                     </div>
                     <div class="carousel-slide">
@@ -310,7 +342,7 @@
                             </div>
                             <div class="project-info">
                                 <h3>Assets</h3>
-                                <p>Todos los assets utilizados son encontrados en el marketplace de Unreal Engine, dado que era una prueba.</p>
+                                <p>La prueba consistía en usar assets desde el marketplace de Unreal Engine.</p>
                             </div>
                         </div>
                     </div>
@@ -319,12 +351,20 @@
                             <div class="project-image">
                                 <img src="Fotos/Carrusel/Isla/Isla (5).png" alt="Isla en Unreal Engine 5.1, imagen 5">
                             </div>
+                            <div class="project-info">
+                                <h3>Proyecto de Environment Art</h3>
+                                <p>Prueba de una Isla hecha en UE5.1</p>
+                            </div>
                         </div>
                     </div>
                     <div class="carousel-slide">
                         <div class="project-card">
                             <div class="project-image">
                                 <img src="Fotos/Carrusel/Isla/Isla (6).png" alt="Isla en Unreal Engine 5.1, imagen 6">
+                            </div>
+                            <div class="project-info">
+                                <h3>Proyecto de Environment Art</h3>
+                                <p>Prueba de una Isla hecha en UE5.1</p>
                             </div>
                         </div>
                     </div>
@@ -333,12 +373,20 @@
                             <div class="project-image">
                                 <img src="Fotos/Carrusel/Isla/Isla (7).png" alt="Isla en Unreal Engine 5.1, imagen 7">
                             </div>
+                            <div class="project-info">
+                                <h3>Proyecto de Environment Art</h3>
+                                <p>Prueba de una Isla hecha en UE5.1</p>
+                            </div>
                         </div>
                     </div>
                     <div class="carousel-slide">
                         <div class="project-card">
                             <div class="project-image">
                                 <img src="Fotos/Carrusel/Isla/Isla (8).png" alt="Isla en Unreal Engine 5.1, imagen 8">
+                            </div>
+                            <div class="project-info">
+                                <h3>Proyecto de Environment Art</h3>
+                                <p>Prueba de una Isla hecha en UE5.1</p>
                             </div>
                         </div>
                     </div>
@@ -381,12 +429,20 @@
                             <div class="project-image">
                                 <img src="Fotos/Carrusel/FortniteUEFN/UEFN (3).png" alt="Mapa 1v1 de Fortnite creado con UEFN, imagen 3">
                             </div>
+                            <div class="project-info">
+                                <h3>Proyecto de UEFN Creativo</h3>
+                                <p>Un trabajo para @Flycroc, en Fortnite, usando Unreal Engine for Fortnite.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="carousel-slide">
                         <div class="project-card">
                             <div class="project-image">
                                 <img src="Fotos/Carrusel/FortniteUEFN/UEFN (4).png" alt="Mapa 1v1 de Fortnite creado con UEFN, imagen 4">
+                            </div>
+                            <div class="project-info">
+                                <h3>Proyecto de UEFN Creativo</h3>
+                                <p>Un trabajo para @Flycroc, en Fortnite, usando Unreal Engine for Fortnite.</p>
                             </div>
                         </div>
                     </div>
@@ -419,7 +475,7 @@
         </div>
 
         <h2 class="PROG-section-title">Blender</h2>
-   <div class="proyecto-item" style="margin-top: 60px; margin-bottom: 120px;">
+    <div class="proyecto-item" style="margin-top: 60px; margin-bottom: 120px;">
             <h2 class="section-title">Donut</h2>
             <div class="video-container">
                 <video muted loop playsinline preload="none" data-autoplay>

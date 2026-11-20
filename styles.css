@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     margin-bottom: 90px;
     padding: 0 20px;
@@ -51,6 +51,11 @@ section {
 
 .section-dark .section-title::after {
     background: linear-gradient(to right, #2ecc71, #3498db);
+}
+
+a:active, a:visited { 
+text-decoration: none; 
+color: white; 
 }
 
 /*Proyectos*/
@@ -398,7 +403,7 @@ header {
 /* Habilidades */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
