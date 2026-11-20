@@ -37,8 +37,12 @@ function ajustarAnclaje() {
     window.addEventListener('load', medir);
 }
 
+// ---- Carruseles ----
+const PERIODO = 5000;   // ms entre diapositivas
+const DESFASE = 1700;   // ms de retraso extra por cada carrusel, para que no se muevan a la vez
+
 function inicializarCarruseles() {
-    document.querySelectorAll('[data-carrusel]').forEach((container) => {
+    document.querySelectorAll('[data-carrusel]').forEach((container, indice) => {
         const carousel = container.querySelector('.carousel');
         const slides = container.querySelectorAll('.carousel-slide');
         const prevButton = container.querySelector('.carousel-prev');
@@ -47,12 +51,21 @@ function inicializarCarruseles() {
 
         let currentSlide = 0;
         const totalSlides = slides.length;
-        let autoPlayInterval;
+        const desfase = indice * DESFASE;
+        let timer;
         let visible = false;   // el carrusel está en pantalla
         let hovering = false;  // el ratón está encima
 
+        // Las imágenes son lazy, pero las de slides ocultos no llegarían a cargarse
+        // hasta el momento de moverse (se vería vacío). Se piden de una en una por adelantado.
+        function cargarSlide(n) {
+            slides[(n + totalSlides) % totalSlides]
+                .querySelectorAll('img[loading="lazy"]')
+                .forEach((img) => { img.loading = 'eager'; });
+        }
         function updateCarousel() {
             carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+            cargarSlide(currentSlide + 1);
         }
         function nextSlide() {
             currentSlide = (currentSlide + 1) % totalSlides;
@@ -60,27 +73,26 @@ function inicializarCarruseles() {
         }
         function prevSlide() {
             currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            cargarSlide(currentSlide - 1);
             updateCarousel();
         }
         function stopAutoPlay() {
-            clearInterval(autoPlayInterval);
+            clearTimeout(timer);
+            clearInterval(timer);
         }
-        // Solo avanza solo si está visible, sin ratón encima y con la pestaña activa
+        // Solo avanza solo si está visible, sin ratón encima y con la pestaña activa.
+        // El primer cambio espera PERIODO + desfase; después, cada PERIODO.
         function startAutoPlay() {
             stopAutoPlay();
-            if (visible && !hovering && !document.hidden) {
-                autoPlayInterval = setInterval(nextSlide, 5000);
-            }
+            if (!visible || hovering || document.hidden) return;
+            timer = setTimeout(() => {
+                nextSlide();
+                timer = setInterval(nextSlide, PERIODO);
+            }, PERIODO + desfase);
         }
 
-        nextButton.addEventListener('click', function() {
-            nextSlide();
-            startAutoPlay();
-        });
-        prevButton.addEventListener('click', function() {
-            prevSlide();
-            startAutoPlay();
-        });
+        nextButton.addEventListener('click', () => { nextSlide(); startAutoPlay(); });
+        prevButton.addEventListener('click', () => { prevSlide(); startAutoPlay(); });
 
         // Pausar/reanudar con el ratón (los toques en móvil no cuentan)
         container.addEventListener('pointerenter', (e) => {
