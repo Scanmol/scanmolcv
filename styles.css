@@ -1300,3 +1300,106 @@ a.btn-descarga:visited, a.btn-descarga:active { color: #fff; }
 @media (max-width: 520px) {
     .about-visual { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 }
+
+/* ===== Versión compacta: la sección no crece más que el texto de la izquierda ===== */
+#sobre-mi .container { align-items: stretch; }
+
+/* Izquierda: texto más ajustado y valores como "píldoras" en una línea */
+.about-grid { gap: 14px; }
+.about-text p { font-size: 0.95rem; line-height: 1.5; margin-bottom: 10px; }
+
+.about-visual {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.visual-element {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px 4px 5px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+}
+.circle-icon {
+    width: 26px;
+    height: 26px;
+    margin: 0;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+.visual-element h3 { font-size: 0.85rem; font-weight: 600; }
+
+/* Derecha: un solo panel con las tres secciones, tipografía pequeña */
+.formacion-bloque { display: flex; }
+.formacion-bloque .content {
+    flex: 1;
+    gap: 0;
+    padding: 14px 18px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    align-content: start;
+}
+.formacion-bloque .column {
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+.formacion-bloque .column + .column {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #dfe4ea;
+}
+
+.formacion-bloque .barra-section-title {
+    margin: 0 0 6px;
+    padding: 0;
+    border: none;
+    text-align: left;
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #3498db;
+}
+
+.formacion-bloque .education-item,
+.formacion-bloque .experience-item {
+    margin: 0 0 6px;
+    padding: 0;
+    border: none;
+}
+.formacion-bloque .education-item:last-child,
+.formacion-bloque .experience-item:last-child { margin-bottom: 0; }
+
+.formacion-bloque .item-title { font-size: 0.92rem; line-height: 1.35; }
+.formacion-bloque .item-subtitle,
+.formacion-bloque .item-date {
+    margin: 0;
+    font-size: 0.82rem;
+    line-height: 1.4;
+}
+
+/* Formación: título, y debajo "centro · fechas" en una línea */
+.education-item .item-subtitle,
+.education-item .item-date { display: inline; }
+.education-item .item-date::before { content: ' · '; color: #7f8c8d; }
+
+/* Experiencia e Idiomas: "título · fecha" en una línea */
+.middle-column .item-title, .middle-column .item-date,
+.right-column .item-title, .right-column .item-date { display: inline; }
+.item-title + .item-date::before { content: ' · '; color: #7f8c8d; }
+
+/* Idiomas en una sola fila */
+.right-column .experience-item {
+    display: inline-block;
+    margin: 0 18px 0 0;
+    vertical-align: top;
+}
+
+@media (max-width: 900px) {
+    .formacion-bloque .content { padding: 14px 16px; }
+}
