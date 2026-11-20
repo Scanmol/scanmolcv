@@ -1169,3 +1169,44 @@ header {
 }
 .btn-descarga:hover, .btn-descarga:focus-visible { background: #2980b9; transform: translateY(-2px); }
 a.btn-descarga:visited, a.btn-descarga:active { color: #fff; }
+
+/* ===== Sobre mí compacto: texto a la izquierda, valores a la derecha ===== */
+#sobre-mi .section-title { margin-bottom: 28px; }
+
+.about-grid {
+    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text p {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    line-height: 1.55;
+}
+.about-text p:last-child { margin-bottom: 0; }
+
+.about-visual {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 24px;
+}
+
+.circle-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 8px;
+    font-size: 1.4rem;
+}
+
+.visual-element h3 { font-size: 1rem; }
+
+@media (max-width: 800px) {
+    .about-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+}
+
+@media (max-width: 700px) {
+    #sobre-mi .section-title { margin-bottom: 20px; }
+    .circle-icon { width: 48px; height: 48px; font-size: 1.2rem; }
+    .visual-element h3 { font-size: 0.95rem; }
+}
