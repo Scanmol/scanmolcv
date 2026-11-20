@@ -1210,3 +1210,93 @@ a.btn-descarga:visited, a.btn-descarga:active { color: #fff; }
     .circle-icon { width: 48px; height: 48px; font-size: 1.2rem; }
     .visual-element h3 { font-size: 0.95rem; }
 }
+
+/* ===== Formación / Experiencia / Idiomas dentro de Sobre mí ===== */
+.formacion-bloque { margin-top: 36px; scroll-margin-top: 12px; }
+
+.formacion-bloque .content {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    padding: 0;
+}
+
+.formacion-bloque .column {
+    min-width: 0;
+    padding: 20px 22px;
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.formacion-bloque .barra-section { margin-bottom: 0; }
+
+.formacion-bloque .barra-section-title {
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    font-size: 1.3rem;
+    color: #2c3e50;
+}
+.formacion-bloque .barra-section-title::after { display: none; }
+
+.formacion-bloque .education-item,
+.formacion-bloque .experience-item {
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #dfe4ea;
+}
+.formacion-bloque .education-item:last-child,
+.formacion-bloque .experience-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.formacion-bloque .item-title { font-size: 1rem; color: #2c3e50; }
+.formacion-bloque .item-date { margin-bottom: 4px; font-size: 0.92rem; }
+.formacion-bloque .item-subtitle { margin: 3px 0; font-size: 0.9rem; line-height: 1.45; }
+
+@media (max-width: 900px) {
+    .formacion-bloque .content { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+}
+@media (max-width: 700px) {
+    .formacion-bloque { margin-top: 28px; }
+    .formacion-bloque .column { padding: 16px 18px; }
+}
+
+/* ===== Sobre mí a la izquierda · Formación/Experiencia/Idiomas a la derecha ===== */
+#sobre-mi .container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 40px;
+    align-items: start;
+}
+#sobre-mi .section-title { grid-column: 1 / -1; }
+
+/* Izquierda: texto y, debajo, los cuatro valores en una fila */
+.about-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+}
+.about-visual {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+.visual-element h3 { font-size: 0.9rem; }
+
+/* Derecha: las tres tarjetas apiladas */
+.formacion-bloque { margin-top: 0; }
+.formacion-bloque .content {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+}
+
+@media (max-width: 900px) {
+    #sobre-mi .container { grid-template-columns: minmax(0, 1fr); }
+    .formacion-bloque { margin-top: 28px; }
+}
+
+@media (max-width: 520px) {
+    .about-visual { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+}
