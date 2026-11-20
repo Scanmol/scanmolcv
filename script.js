@@ -1,10 +1,31 @@
 // script.js
 
 document.addEventListener('DOMContentLoaded', function() {
+    inicializarTema();
     ajustarAnclaje();
     inicializarCarruseles();
     inicializarVideos();
 });
+
+// Modo oscuro (por defecto) / claro, con la elección guardada en el navegador
+function inicializarTema() {
+    const root = document.documentElement;
+    const btn = document.querySelector('.theme-toggle');
+    if (!btn) return;
+    const aplicar = (tema) => {
+        root.setAttribute('data-theme', tema);
+        const destino = tema === 'dark' ? 'claro' : 'oscuro';
+        btn.textContent = tema === 'dark' ? '☀️' : '🌙';
+        btn.setAttribute('aria-label', 'Cambiar a modo ' + destino);
+        btn.title = 'Cambiar a modo ' + destino;
+    };
+    aplicar(root.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+    btn.addEventListener('click', () => {
+        const nuevo = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        aplicar(nuevo);
+        try { localStorage.setItem('tema', nuevo); } catch (e) {}
+    });
+}
 
 // Mide la barra fija para que los anclajes (#contacto, etc.) aterricen justo debajo de ella
 function ajustarAnclaje() {
