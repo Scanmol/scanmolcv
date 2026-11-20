@@ -1,9 +1,20 @@
 // script.js
 
 document.addEventListener('DOMContentLoaded', function() {
+    ajustarAnclaje();
     inicializarCarruseles();
     inicializarVideos();
 });
+
+// Mide la barra fija para que los anclajes (#contacto, etc.) aterricen justo debajo de ella
+function ajustarAnclaje() {
+    const nav = document.querySelector('.main-nav');
+    if (!nav) return;
+    const medir = () => document.documentElement.style.setProperty('--nav-h', nav.offsetHeight + 'px');
+    medir();
+    window.addEventListener('resize', medir);
+    window.addEventListener('load', medir);
+}
 
 function inicializarCarruseles() {
     document.querySelectorAll('[data-carrusel]').forEach((container) => {
@@ -16,6 +27,8 @@ function inicializarCarruseles() {
         let currentSlide = 0;
         const totalSlides = slides.length;
         let autoPlayInterval;
+        let visible = false;   // el carrusel está en pantalla
+        let hovering = false;  // el ratón está encima
 
         function updateCarousel() {
             carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
@@ -28,31 +41,47 @@ function inicializarCarruseles() {
             currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
             updateCarousel();
         }
-        function startAutoPlay() {
-            stopAutoPlay();
-            autoPlayInterval = setInterval(nextSlide, 5000);
-        }
         function stopAutoPlay() {
             clearInterval(autoPlayInterval);
         }
+        // Solo avanza solo si está visible, sin ratón encima y con la pestaña activa
+        function startAutoPlay() {
+            stopAutoPlay();
+            if (visible && !hovering && !document.hidden) {
+                autoPlayInterval = setInterval(nextSlide, 5000);
+            }
+        }
 
         nextButton.addEventListener('click', function() {
-            stopAutoPlay();
             nextSlide();
             startAutoPlay();
         });
         prevButton.addEventListener('click', function() {
-            stopAutoPlay();
             prevSlide();
             startAutoPlay();
         });
 
-        // Pausar/reanudar al hacer hover
-        container.addEventListener('mouseenter', stopAutoPlay);
-        container.addEventListener('mouseleave', startAutoPlay);
+        // Pausar/reanudar con el ratón (los toques en móvil no cuentan)
+        container.addEventListener('pointerenter', (e) => {
+            if (e.pointerType === 'mouse') { hovering = true; stopAutoPlay(); }
+        });
+        container.addEventListener('pointerleave', (e) => {
+            if (e.pointerType === 'mouse') { hovering = false; startAutoPlay(); }
+        });
+        document.addEventListener('visibilitychange', startAutoPlay);
 
         updateCarousel();
-        startAutoPlay();
+
+        // Solo se mueve mientras está en pantalla
+        if ('IntersectionObserver' in window) {
+            new IntersectionObserver((entries) => {
+                visible = entries[0].isIntersecting;
+                startAutoPlay();
+            }, { threshold: 0.5 }).observe(container);
+        } else {
+            visible = true;
+            startAutoPlay();
+        }
     });
 }
 
