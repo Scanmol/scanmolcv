@@ -67,9 +67,9 @@ html[data-theme="dark"] {
     --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.35);
 
     --icon-bg: #eef1f5;
-    --icon-pad: 8px;
+    --icon-pad: 0;
     --icon-radius: 14px;
-    --icon-fit: contain;
+    --icon-fit: cover;
 }
 
 
@@ -166,12 +166,12 @@ section { padding: 56px 0; }
 }
 
 .theme-toggle {
-    padding: 2px 9px;
+    padding: 2px 10px;
     border: 1px solid rgba(255, 255, 255, 0.35);
     border-radius: 14px;
     background: transparent;
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.5;
     cursor: pointer;
     transition: background 0.2s;
