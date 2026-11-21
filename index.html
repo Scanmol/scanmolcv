@@ -17,10 +17,10 @@
 </head>
 <body>
 <nav class="main-nav" aria-label="Navegación principal">
-        <a href="#sobre-mi" style="text-decoration:none">Sobre mí (Formación y experiencia)</a>
-        <a href="#habilidades" style="text-decoration:none">Habilidades</a>
-        <a href="#proyectos" style="text-decoration:none">Proyectos</a>
-        <a href="#contacto" style="text-decoration:none">Contacto</a>
+        <a href="#sobre-mi">Sobre mí (Formación y experiencia)</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
         <button class="theme-toggle" type="button" aria-label="Cambiar a modo claro" title="Cambiar a modo claro">☀️</button>
     </nav>
 <!--HEADER-->
@@ -28,9 +28,7 @@
         <div class="header-content">
             <div class="profile-container">
                 <div class="profile-circle">
-                    <div class="profile-circle img">
                     <img src="Fotos/Pfp/CVFoto.jpg" alt="Foto de Sergio Cano Molina">
-                    </div>
                 </div>
             </div>
             <div class="header-text">
@@ -83,67 +81,48 @@
 
             <!--FORMACIÓN, EXPERIENCIA E IDIOMAS-->
             <div id="formacion" class="formacion-bloque">
-                <div class="content">
-                    <div class="column left-column">
-                    <div class="barra-section">
-                        <h2 class="barra-section-title">Formación</h2>
-                            
-                            <div class="education-item">
-                                <div class="item-title">Grado Superior de Desarrollo de Aplicaciones Multiplataforma</div>
-                                <div class="item-subtitle">IES Zaidín Vergeles</div>
-                                <div class="item-date">2026 - 2028 (1º curso en marcha)</div>
-                            </div>
-                            
-                            <br>
-
-                            <div class="education-item">
-                                <div class="item-title">Grado en Sistemas Microinformáticos y Redes</div>
-                                <div class="item-subtitle">IES Francisco Ayala</div>
-                                <div class="item-date">2024 - 2026</div>
-                            </div>
+                <div class="column">
+                    <h3 class="column-title">Formación</h3>
+                    <div class="item">
+                        <div class="item-title">Grado Superior de Desarrollo de Aplicaciones Multiplataforma</div>
+                        <div class="item-subtitle">IES Zaidín Vergeles</div>
+                        <div class="item-date">2026 - 2028 (1º curso en marcha)</div>
                     </div>
+                    <div class="item">
+                        <div class="item-title">Grado en Sistemas Microinformáticos y Redes</div>
+                        <div class="item-subtitle">IES Francisco Ayala</div>
+                        <div class="item-date">2024 - 2026</div>
                     </div>
-                        
-                        <div class="column middle-column">
-                            <div class="barra-section">
-                                <h2 class="barra-section-title">Experiencia</h2>
-                                
-                            <div class="experience-item">
-                                <div class="item-title">· Prácticas en TIC</div>
-                            </div>
+                </div>
 
-                            <div class="experience-item">
-                                <div class="item-title">IES Pedro Soto de Rojas</div>
-                                <div class="item-date">2025 - 2026 (4 meses)</div>
-                                <div class="item-subtitle">Instalación de sistemas operativos, reparación de equipos, cableado y electrónica de redes locales, y configuración y 
-                                    mantenimiento de servicios multiusuario, aplicaciones y dispositivos compartidos en red local.</div>
-                            </div>
-
-                            <div class="experience-item">
-                                <div class="item-title">IES Zaidín Vergeles</div>
-                                <div class="item-date">2025 (1 mes)</div>
-                            </div>
-
-                            </div>
-                        </div>
-                        <div class="column right-column">
-                            <div class="barra-section">
-                                <h2 class="barra-section-title">Idiomas</h2>
-                                
-                            <div class="experience-item">
-                                <div class="item-title">Español</div>
-                                <div class="item-date">Nativo</div>
-                            </div>
-
-                            <br>
-
-                            <div class="experience-item">
-                                <div class="item-title">Inglés</div>
-                                <div class="item-date">Muy avanzado · C2 escrito y hablado</div>
-                            </div>
-                        </div>
+                <div class="column">
+                    <h3 class="column-title">Experiencia</h3>
+                    <div class="item">
+                        <div class="item-title">· Prácticas en TIC</div>
                     </div>
-            </div>
+                    <div class="item">
+                        <div class="item-title">IES Pedro Soto de Rojas</div>
+                        <div class="item-date">2025 - 2026 (4 meses)</div>
+                        <div class="item-subtitle">Instalación de sistemas operativos, reparación de equipos, cableado y electrónica de redes locales, y configuración y
+                            mantenimiento de servicios multiusuario, aplicaciones y dispositivos compartidos en red local.</div>
+                    </div>
+                    <div class="item">
+                        <div class="item-title">IES Zaidín Vergeles</div>
+                        <div class="item-date">2025 (1 mes)</div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3 class="column-title">Idiomas</h3>
+                    <div class="item">
+                        <div class="item-title">Español</div>
+                        <div class="item-date">Nativo</div>
+                    </div>
+                    <div class="item">
+                        <div class="item-title">Inglés</div>
+                        <div class="item-date">Muy avanzado · C2 escrito y hablado</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -209,8 +188,8 @@
                 <div class="carousel">
                     <div class="carousel-slide">
                         <div class="project-card">
-                            <div class="project-image2">
-                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Castillo/Castillo (1).png" alt="Castillo en ruinas en Unreal Engine, imagen 1">
+                            <div class="project-image">
+                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Castillo/Castillo (1).jpg" alt="Castillo en ruinas en Unreal Engine, imagen 1">
                             </div>
                             <div class="project-info">
                                 <h3>Proyecto de Environment Art</h3>
@@ -220,8 +199,8 @@
                     </div>
                     <div class="carousel-slide">
                         <div class="project-card">
-                            <div class="project-image2">
-                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Castillo/Castillo (2).png" alt="Castillo en ruinas en Unreal Engine, imagen 2">
+                            <div class="project-image">
+                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Castillo/Castillo (2).jpg" alt="Castillo en ruinas en Unreal Engine, imagen 2">
                             </div>
                             <div class="project-info">
                                 <h3>Assets</h3>
@@ -231,8 +210,8 @@
                     </div>
                     <div class="carousel-slide">
                         <div class="project-card">
-                            <div class="project-image2">
-                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Castillo/Castillo (3).png" alt="Castillo en ruinas en Unreal Engine, imagen 3">
+                            <div class="project-image">
+                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Castillo/Castillo (3).jpg" alt="Castillo en ruinas en Unreal Engine, imagen 3">
                             </div>
                             <div class="project-info">
                                 <h3>Proyecto de Environment Art</h3>
@@ -242,8 +221,8 @@
                     </div>
                     <div class="carousel-slide">
                         <div class="project-card">
-                            <div class="project-image2">
-                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Castillo/Castillo (4).png" alt="Castillo en ruinas en Unreal Engine, imagen 4">
+                            <div class="project-image">
+                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Castillo/Castillo (4).jpg" alt="Castillo en ruinas en Unreal Engine, imagen 4">
                             </div>
                             <div class="project-info">
                                 <h3>Proyecto de Environment Art</h3>
@@ -253,8 +232,8 @@
                     </div>
                     <div class="carousel-slide">
                         <div class="project-card">
-                            <div class="project-image2">
-                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Castillo/Castillo (5).png" alt="Castillo en ruinas en Unreal Engine, imagen 5">
+                            <div class="project-image">
+                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Castillo/Castillo (5).jpg" alt="Castillo en ruinas en Unreal Engine, imagen 5">
                             </div>
                             <div class="project-info">
                                 <h3>Proyecto de Environment Art</h3>
@@ -264,8 +243,8 @@
                     </div>
                     <div class="carousel-slide">
                         <div class="project-card">
-                            <div class="project-image2">
-                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Castillo/Castillo (6).png" alt="Castillo en ruinas en Unreal Engine, imagen 6">
+                            <div class="project-image">
+                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Castillo/Castillo (6).jpg" alt="Castillo en ruinas en Unreal Engine, imagen 6">
                             </div>
                             <div class="project-info">
                                 <h3>Proyecto de Environment Art</h3>
@@ -275,8 +254,8 @@
                     </div>
                     <div class="carousel-slide">
                         <div class="project-card">
-                            <div class="project-image2">
-                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Castillo/Castillo (7).png" alt="Castillo en ruinas en Unreal Engine, imagen 7">
+                            <div class="project-image">
+                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Castillo/Castillo (7).jpg" alt="Castillo en ruinas en Unreal Engine, imagen 7">
                             </div>
                             <div class="project-info">
                                 <h3>Proyecto de Environment Art</h3>
@@ -286,8 +265,8 @@
                     </div>
                     <div class="carousel-slide">
                         <div class="project-card">
-                            <div class="project-image2">
-                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Castillo/Castillo (8).png" alt="Castillo en ruinas en Unreal Engine, imagen 8">
+                            <div class="project-image">
+                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Castillo/Castillo (8).jpg" alt="Castillo en ruinas en Unreal Engine, imagen 8">
                             </div>
                             <div class="project-info">
                                 <h3>Proyecto de Environment Art</h3>
@@ -311,7 +290,7 @@
                     <div class="carousel-slide">
                         <div class="project-card">
                             <div class="project-image">
-                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Isla/Isla (1).png" alt="Isla en Unreal Engine 5.1, imagen 1">
+                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Isla/Isla (1).jpg" alt="Isla en Unreal Engine 5.1, imagen 1">
                             </div>
                             <div class="project-info">
                                 <h3>Proyecto de Environment Art</h3>
@@ -322,7 +301,7 @@
                     <div class="carousel-slide">
                         <div class="project-card">
                             <div class="project-image">
-                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Isla/Isla (2).png" alt="Isla en Unreal Engine 5.1, imagen 2">
+                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Isla/Isla (2).jpg" alt="Isla en Unreal Engine 5.1, imagen 2">
                             </div>
                             <div class="project-info">
                                 <h3>Proyecto de Environment Art</h3>
@@ -333,7 +312,7 @@
                     <div class="carousel-slide">
                         <div class="project-card">
                             <div class="project-image">
-                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Isla/Isla (3).png" alt="Isla en Unreal Engine 5.1, imagen 3">
+                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Isla/Isla (3).jpg" alt="Isla en Unreal Engine 5.1, imagen 3">
                             </div>
                             <div class="project-info">
                                 <h3>Agua</h3>
@@ -344,7 +323,7 @@
                     <div class="carousel-slide">
                         <div class="project-card">
                             <div class="project-image">
-                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Isla/Isla (4).png" alt="Isla en Unreal Engine 5.1, imagen 4">
+                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Isla/Isla (4).jpg" alt="Isla en Unreal Engine 5.1, imagen 4">
                             </div>
                             <div class="project-info">
                                 <h3>Assets</h3>
@@ -355,7 +334,7 @@
                     <div class="carousel-slide">
                         <div class="project-card">
                             <div class="project-image">
-                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Isla/Isla (5).png" alt="Isla en Unreal Engine 5.1, imagen 5">
+                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Isla/Isla (5).jpg" alt="Isla en Unreal Engine 5.1, imagen 5">
                             </div>
                             <div class="project-info">
                                 <h3>Proyecto de Environment Art</h3>
@@ -366,7 +345,7 @@
                     <div class="carousel-slide">
                         <div class="project-card">
                             <div class="project-image">
-                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Isla/Isla (6).png" alt="Isla en Unreal Engine 5.1, imagen 6">
+                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Isla/Isla (6).jpg" alt="Isla en Unreal Engine 5.1, imagen 6">
                             </div>
                             <div class="project-info">
                                 <h3>Proyecto de Environment Art</h3>
@@ -377,7 +356,7 @@
                     <div class="carousel-slide">
                         <div class="project-card">
                             <div class="project-image">
-                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Isla/Isla (7).png" alt="Isla en Unreal Engine 5.1, imagen 7">
+                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Isla/Isla (7).jpg" alt="Isla en Unreal Engine 5.1, imagen 7">
                             </div>
                             <div class="project-info">
                                 <h3>Proyecto de Environment Art</h3>
@@ -388,7 +367,7 @@
                     <div class="carousel-slide">
                         <div class="project-card">
                             <div class="project-image">
-                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Isla/Isla (8).png" alt="Isla en Unreal Engine 5.1, imagen 8">
+                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/Isla/Isla (8).jpg" alt="Isla en Unreal Engine 5.1, imagen 8">
                             </div>
                             <div class="project-info">
                                 <h3>Proyecto de Environment Art</h3>
@@ -412,7 +391,7 @@
                     <div class="carousel-slide">
                         <div class="project-card">
                             <div class="project-image">
-                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/FortniteUEFN/UEFN (1).png" alt="Mapa 1v1 de Fortnite creado con UEFN, imagen 1">
+                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/FortniteUEFN/UEFN (1).jpg" alt="Mapa 1v1 de Fortnite creado con UEFN, imagen 1">
                             </div>
                             <div class="project-info">
                                 <h3>Proyecto de UEFN Creativo</h3>
@@ -423,7 +402,7 @@
                     <div class="carousel-slide">
                         <div class="project-card">
                             <div class="project-image">
-                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/FortniteUEFN/UEFN (2).png" alt="Mapa 1v1 de Fortnite creado con UEFN, imagen 2">
+                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/FortniteUEFN/UEFN (2).jpg" alt="Mapa 1v1 de Fortnite creado con UEFN, imagen 2">
                             </div>
                             <div class="project-info">
                                 <h3>Creativo</h3>
@@ -434,7 +413,7 @@
                     <div class="carousel-slide">
                         <div class="project-card">
                             <div class="project-image">
-                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/FortniteUEFN/UEFN (3).png" alt="Mapa 1v1 de Fortnite creado con UEFN, imagen 3">
+                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/FortniteUEFN/UEFN (3).jpg" alt="Mapa 1v1 de Fortnite creado con UEFN, imagen 3">
                             </div>
                             <div class="project-info">
                                 <h3>Proyecto de UEFN Creativo</h3>
@@ -445,7 +424,7 @@
                     <div class="carousel-slide">
                         <div class="project-card">
                             <div class="project-image">
-                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/FortniteUEFN/UEFN (4).png" alt="Mapa 1v1 de Fortnite creado con UEFN, imagen 4">
+                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/FortniteUEFN/UEFN (4).jpg" alt="Mapa 1v1 de Fortnite creado con UEFN, imagen 4">
                             </div>
                             <div class="project-info">
                                 <h3>Proyecto de UEFN Creativo</h3>
@@ -456,7 +435,7 @@
                     <div class="carousel-slide">
                         <div class="project-card">
                             <div class="project-image">
-                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/FortniteUEFN/UEFN (5).png" alt="Mapa 1v1 de Fortnite creado con UEFN, imagen 5">
+                                <img loading="lazy" decoding="async" src="Fotos/Carrusel/FortniteUEFN/UEFN (5).jpg" alt="Mapa 1v1 de Fortnite creado con UEFN, imagen 5">
                             </div>
                             <div class="project-info">
                                 <h3>Página del juego</h3>
@@ -497,7 +476,7 @@
                 <h3 class="proyecto-titulo">Juego interactivo en PowerPoint</h3>
                 <div class="video-box">
                     <video muted loop playsinline preload="metadata" data-autoplay>
-                        <source src="Fotos/Carrusel/PowerPoint/Replay 2025-10-24 13-51-24 - Compressed with FlexClip.mp4" type="video/mp4">
+                        <source src="Fotos/Carrusel/PowerPoint/PPTXjuego.mp4" type="video/mp4">
                     </video>
                 </div>
                 <!-- Pon aquí el enlace de descarga de tu proyecto de PowerPoint -->
@@ -508,23 +487,21 @@
         </div>
     </section>
 
-    <!-- Sección Contacto -->
+    <!--CONTACTO-->
     <section id="contacto" class="section-light">
         <div class="container">
             <h2 class="section-title">Contacto</h2>
             <div class="contact-grid">
-                <div class="contact-item">
-                    <img src="Fotos/Iconos/Gmail.png" class="contact-icon2" alt="Correo electrónico">
-                    <p class="contact-p"><a href="mailto:scanmol0801@gmail.com">scanmol0801@gmail.com</a></p>
-                </div>
-                <a href="https://github.com/Scanmol" target="_blank" style="text-decoration: none; color: inherit;">
-                <div class="contact-item">
-                    <img src="Fotos/Iconos/GitHub.png" class="contact-icon2" alt="GitHub">
+                <a class="contact-item" href="mailto:scanmol0801@gmail.com">
+                    <img src="Fotos/Iconos/Gmail.png" class="contact-icon" alt="Correo electrónico">
+                    <p>scanmol0801@gmail.com</p>
+                </a>
+                <a class="contact-item" href="https://github.com/Scanmol" target="_blank" rel="noopener">
+                    <img src="Fotos/Iconos/GitHub.png" class="contact-icon" alt="GitHub">
                     <p>github/Scanmol</p>
-                </div>
                 </a>
                 <div class="contact-item">
-                    <img src="Fotos/Iconos/location.png" class="contact-icon2" alt="Ubicación">
+                    <img src="Fotos/Iconos/location.png" class="contact-icon" alt="Ubicación">
                     <p>BASED IN Granada</p>
                 </div>
             </div>
