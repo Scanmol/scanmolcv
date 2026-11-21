@@ -38,8 +38,8 @@ function ajustarAnclaje() {
 }
 
 // ---- Carruseles ----
-const PERIODO = 5000;   // ms entre diapositivas
-const DESFASE = 1700;   // ms de retraso extra por cada carrusel, para que no se muevan a la vez
+const PERIODO = 3000;   // ms entre diapositivas
+const DESFASE = 1200;   // ms de retraso extra por cada carrusel, para que no se muevan a la vez
 
 function inicializarCarruseles() {
     document.querySelectorAll('[data-carrusel]').forEach((container, indice) => {
